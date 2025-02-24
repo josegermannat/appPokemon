@@ -3,9 +3,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const numeroDePokemon = document.getElementById("Numero-pokemon");
     const weightDePokemon = document.getElementById("weight-pokemon");
     const heightDePokemon = document.getElementById("height-pokemon");
+    const  elemento = document.querySelector(".pokemon___image");
     
-    
-    const ImagenPokemon = document.getElementById("Imagen-Pokemon");
+ 
     
     
     
@@ -17,26 +17,43 @@ window.addEventListener("DOMContentLoaded", () => {
         const inputValue = document.getElementById("buscador-pokemon").value;
         if(inputValue === ""){
             alert("escribe un nombre de pokemon valido")
+            return
         }
+
+        elemento.innerHTML = "";
              fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
              .then(response => response.json())
              .then(info => {
+                
+                const ImagenPokemon = document.createElement("img");
+                ImagenPokemon.src =  info.sprites.other["official-artwork"].front_default;
+                ImagenPokemon.classList.add("animation")
+
                 NombreDePokemon.innerHTML = info.name;
                 numeroDePokemon.innerHTML = `Numero: ${info.id}`;
                 weightDePokemon.innerHTML = `Weight: ${info.weight}`;
                 heightDePokemon.innerHTML = `Height: ${info.height}`;
-                ImagenPokemon.src =  info.sprites.other["official-artwork"].front_default;
-                       
+             
+                elemento.appendChild(ImagenPokemon);
 
 
-             })  .catch(error => console.error("Error al obtener los datos:", error));
+                ImagenPokemon.addEventListener("click", () => {
+                    const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
+               
+                   if(ImagenPokemon.src !== ""){
+                    audio.play()
+                   }
+                  })
+                
+   
+             })  .catch(err  =>{
+                     console.error("error al obtener los datos", err)
+                     alert("No se encontro el pokemon prueba con otro nombre")
+             });
         
           
 
-              ImagenPokemon.addEventListener("click", () => {
-                const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-               audio.play()
-              })
+              
             
 
     })

@@ -124,6 +124,22 @@ box-shadow: 0 0 3px #000;
     filter: drop-shadow( 5px 5px rgba(0, 0, 0, 0.5));
     transition: all ease 0.3s;
     cursor: pointer;
+  
+    animation-duration: 2s;
+}
+@keyframes subirPokemon {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animation{
+    animation: subirPokemon 0.1s ease-in;
+
 }
 
 .pokemon___image > img:hover{
@@ -145,3 +161,10 @@ box-shadow: 0 0 3px #000;
 
 }
 
+/* 📱 Estilos para móviles (hasta 600px) */
+@media (max-width: 600px) {
+    .container{
+        width: 86%;
+    }
+}
+   
