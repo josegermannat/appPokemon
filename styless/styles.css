@@ -1,0 +1,145 @@
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdbdb;
+    font-family: sans-serif;
+
+}
+
+.container{
+    width: 43%;
+    height: 85%;
+    background-color: #Fff;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: black;
+    box-shadow:  0 0 10px #000;
+}
+
+.container___buscador{
+    width: 100%;
+    height: 55%;
+    background-color: #00D1B1;
+  
+}
+
+.container___pokemon{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    border-top-left-radius: 50px;  
+    border-top-right-radius: 50px; 
+position: relative;
+bottom: 5%;
+z-index: 2;
+box-shadow: 0 0 3px #000;
+  }
+
+
+  .buscador___interfaz{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 50px;
+     }
+  
+.buscador___title{
+    width: 100%;
+    height: 60%;
+    
+
+    
+}
+.buscador___title >h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow:  0  10px #09927e;
+     position: relative;
+     bottom: 20px;
+
+}
+
+.interfaz___input{
+    width: 65%;
+    height: 15%;
+    padding: 8px 10px;
+   
+    font-size: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 5px 5px #09927e;
+    transition: all ease 0.2s;
+}
+.interfaz___input:hover{
+    transform: scale(103%);
+ 
+}
+.interfaz___input::placeholder{
+    color: #09927e;
+}
+
+
+.interfaz___button{
+    width: 55%;
+    height: 25%;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid transparent;
+    font-size: 18px;
+    border-radius: 8px;
+  cursor: pointer;
+    box-shadow: 5px 5px #09927e;
+    transition: all ease-in-out 0.2s;
+    color: #09927e;
+}
+.interfaz___button:hover{
+    transform: scale(103%);
+}
+
+.pokemon___image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+   margin-bottom: 10px;
+}
+
+
+.pokemon___image > img{
+    width: 100%;
+    position: relative;
+    bottom: 20%;
+    filter: drop-shadow( 5px 5px rgba(0, 0, 0, 0.5));
+    transition: all ease 0.3s;
+}
+
+.pokemon___image > img:hover{
+    transform: scale(105%);
+}
+.pokemon___estadisticas{
+  padding: 10px 8px;
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+
+
+}
+
