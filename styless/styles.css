@@ -118,10 +118,12 @@ box-shadow: 0 0 3px #000;
 
 .pokemon___image > img{
     width: 100%;
+    height: 230%;
     position: relative;
     bottom: 20%;
     filter: drop-shadow( 5px 5px rgba(0, 0, 0, 0.5));
     transition: all ease 0.3s;
+    cursor: pointer;
 }
 
 .pokemon___image > img:hover{
