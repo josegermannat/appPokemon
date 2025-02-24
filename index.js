@@ -14,6 +14,8 @@ window.addEventListener("DOMContentLoaded", () => {
     
 
     button.addEventListener("click", () =>  {
+        const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
+        audio.play()
         const inputValue = document.getElementById("buscador-pokemon").value;
         if(inputValue === ""){
             alert("escribe un nombre de pokemon valido")
@@ -27,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 
                 const ImagenPokemon = document.createElement("img");
                 ImagenPokemon.src =  info.sprites.other["official-artwork"].front_default;
+              
                 ImagenPokemon.classList.add("animation")
 
                 NombreDePokemon.innerHTML = info.name;
@@ -35,15 +38,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 heightDePokemon.innerHTML = `Height: ${info.height}`;
              
                 elemento.appendChild(ImagenPokemon);
-
-
-                ImagenPokemon.addEventListener("click", () => {
-                    const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-               
-                   if(ImagenPokemon.src !== ""){
-                    audio.play()
-                   }
-                  })
+             
+                
                 
    
              })  .catch(err  =>{
