@@ -22,7 +22,8 @@
 .container___buscador{
     width: 100%;
     height: 55%;
-    background-color: #00D1B1;
+    background: linear-gradient(to bottom,  #00D1B1, rgb(0, 63, 32));
+  
   
 }
 
@@ -59,13 +60,13 @@ box-shadow: 0 0 3px #000;
 }
 .buscador___title >h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     font-style: italic;
-    text-shadow:  0  10px #09927e;
+    text-shadow: 0  0 2px #e2e2e2;
      position: relative;
      bottom: 20px;
-     color: #030303;
+     color: #b3fff4;
 
 }
 

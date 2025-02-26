@@ -14,9 +14,13 @@ window.addEventListener("DOMContentLoaded", () => {
     
 
     button.addEventListener("click", () =>  {
-        const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-        audio.play()
         const inputValue = document.getElementById("buscador-pokemon").value;
+        const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
+        if(inputValue !== ""){
+            audio.play()
+        }
+       
+    
         if(inputValue === ""){
             alert("escribe un nombre de pokemon valido")
             return
