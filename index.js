@@ -17,14 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const inputValue = document.getElementById("buscador-pokemon").value.toLowerCase().trim();
 
         
-        try {
-            if(inputValue !== ""){
-                const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-               audio.play()
-            }
-        } catch (error) {
-            console.warn("Error al reproducir el audio", error);
-        }
+        
        
     
         if(inputValue === ""){
@@ -32,11 +25,27 @@ window.addEventListener("DOMContentLoaded", () => {
             return
         }
 
-        elemento.innerHTML = "";
+        
         fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
              .then(response => response.json())
              .then(info => {
+                elemento.innerHTML = "";
+
+
+                const inputValue = document.getElementById("buscador-pokemon").value.toLowerCase().trim();
+
+        
+        try {
+            if(inputValue !== ""){
                 
+                const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
+               audio.play()
+            }
+        } catch (error) {
+            console.warn("Error al reproducir el audio", error);
+        }
+
+        
                 const ImagenPokemon = document.createElement("img");
                 ImagenPokemon.src =  info.sprites.other["official-artwork"].front_default;
               
@@ -54,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
    
              })  .catch(err  => {
                 console.error("Error en fetch:", err);
-                alert("Error en fetch: " + err.message);  // Muestra el error en una alerta
+                alert("Escribe otro pokemon valido");  // Muestra el error en una alerta
             });
         
           
