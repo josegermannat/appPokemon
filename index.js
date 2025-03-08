@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
         try {
             if(inputValue !== ""){
                 const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-               audio.play
+               audio.play()
             }
         } catch (error) {
             console.warn("Error al reproducir el audio", error);
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         elemento.innerHTML = "";
-        fetch(`https://cors-anywhere.herokuapp.com/https://pokeapi.co/api/v2/pokemon/${inputValue}`)
+        fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
              .then(response => response.json())
              .then(info => {
                 
