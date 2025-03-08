@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
         try {
             if(inputValue !== ""){
                 const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-               audio.play()
+               audio.play
             }
         } catch (error) {
             console.warn("Error al reproducir el audio", error);
@@ -55,7 +55,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 console.error("Error en fetch:", err);
                 alert("Error en fetch: " + err.message);  // Muestra el error en una alerta
             });
-             });
         
           
 
