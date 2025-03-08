@@ -14,7 +14,8 @@ window.addEventListener("DOMContentLoaded", () => {
     
 
     button.addEventListener("click", () =>  {
-        const inputValue = document.getElementById("buscador-pokemon").value;
+        const inputValue = document.getElementById("buscador-pokemon").value.toLowerCase().trim();
+
         
         try {
             if(inputValue !== ""){
