@@ -15,9 +15,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () =>  {
         const inputValue = document.getElementById("buscador-pokemon").value;
-        const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
-        if(inputValue !== ""){
-            audio.play()
+        
+        try {
+            if(inputValue !== ""){
+                const audio = new Audio("pokemon-level-up-made-with-Voicemod.mp3");
+               audio.play()
+            }
+        } catch (error) {
+            console.warn("Error al reproducir el audio", error);
         }
        
     
