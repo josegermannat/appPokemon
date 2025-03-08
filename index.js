@@ -51,9 +51,10 @@ window.addEventListener("DOMContentLoaded", () => {
                 
                 
    
-             })  .catch(err  =>{
-                     console.error("error al obtener los datos", err)
-                     alert("No se encontro el pokemon prueba con otro nombre")
+             })  .catch(err  => {
+                console.error("Error en fetch:", err);
+                alert("Error en fetch: " + err.message);  // Muestra el error en una alerta
+            });
              });
         
           
