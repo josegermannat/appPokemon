@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         elemento.innerHTML = "";
-             fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://pokeapi.co/api/v2/pokemon/${inputValue}`)
              .then(response => response.json())
              .then(info => {
                 
