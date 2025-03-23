@@ -171,7 +171,11 @@ box-shadow: 0 0 3px #000;
 /* 📱 Estilos para móviles (hasta 600px) */
 @media (max-width: 600px) {
     .container{
-        width: 86%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+      
     }
-}
+    
+}    
    
