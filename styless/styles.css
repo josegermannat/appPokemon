@@ -60,7 +60,7 @@ box-shadow: 0 0 3px #000;
 }
 .buscador___title >h1{
     text-align: center;
-    font-size: 45px;
+    font-size: 3.5rem;
     font-weight: bold;
     font-style: italic;
     text-shadow: 0  0 2px #e2e2e2;
@@ -162,6 +162,10 @@ box-shadow: 0 0 3px #000;
     font-style: italic;
 
 
+}
+
+.remove{
+    display: none;
 }
 
 /* 📱 Estilos para móviles (hasta 600px) */

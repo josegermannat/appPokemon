@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const numeroDePokemon = document.getElementById("Numero-pokemon");
     const weightDePokemon = document.getElementById("weight-pokemon");
     const heightDePokemon = document.getElementById("height-pokemon");
-    const  elemento = document.querySelector(".pokemon___image");
+    const  containerPokemon = document.querySelector(".pokemon___image");
     
  
     
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
              .then(response => response.json())
              .then(info => {
-                elemento.innerHTML = "";
+                containerPokemon.innerHTML = "";
 
 
                 const inputValue = document.getElementById("buscador-pokemon").value.toLowerCase().trim();
@@ -45,7 +45,6 @@ window.addEventListener("DOMContentLoaded", () => {
             console.warn("Error al reproducir el audio", error);
         }
 
-        
                 const ImagenPokemon = document.createElement("img");
                 ImagenPokemon.src =  info.sprites.other["official-artwork"].front_default;
               
@@ -56,8 +55,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 weightDePokemon.innerHTML = `Weight: ${info.weight}`;
                 heightDePokemon.innerHTML = `Height: ${info.height}`;
              
-                elemento.appendChild(ImagenPokemon);
-             
+          
+             containerPokemon.appendChild(ImagenPokemon)
                 
                 
    
